@@ -22,19 +22,22 @@ var productSchema = new mongoose.Schema({
         required:true,
     },
     category:{
-        type:mongoose.Schema.Types.ObjectID,
-        ref:"Category",
+        type:String,
+        required:true,
     },
     brand:{
         type:String,
-        enum:["Cannon", "Sony", "Nikon"],
+        required:true,
     },
 
-    quantity: Number,
+    quantity: {
+        type:Number,
+        required:true,
+    },
 
     sold:{
         type:Number,
-        default:0
+        default:0,
     },
 
     images:{
@@ -43,7 +46,7 @@ var productSchema = new mongoose.Schema({
     },
     color:{
         type:String,
-        enum:['Black','Brown','Red'],
+        required:true,
     },
     ratings:[{
         start:Number,

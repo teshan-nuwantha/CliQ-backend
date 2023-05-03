@@ -18,6 +18,7 @@ const createUser = asyncHandler(async (req,res) => {
     else{
         throw new Error("User Already Exists");
     }
+<<<<<<< HEAD
 }
 );
 
@@ -148,3 +149,8 @@ const unblockUser = asyncHandler (async(req, res) => {
 });
 
 module.exports={createUser, loginUserCrtl, getallUser, getaUser, deleteaUser, updatedUser, blockUser, unblockUser};
+=======
+};
+
+module.exports = { createUser};
+>>>>>>> b4517706f7acd80ab1d3b2762a91ff9e10d45b8c

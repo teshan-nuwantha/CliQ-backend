@@ -8,6 +8,7 @@ const productRouter = require("./routes/productRoute");
 const morgan = require("morgan");
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
+const { notFound, errorHandler } = require('./middlewares/errorHandler');
 
 
 dbConnect()
@@ -30,3 +31,4 @@ app.listen(PORT, ()=>{
     console.log(`Server is running at PORT ${PORT}`);
 });
 
+// time - 3:22:44
